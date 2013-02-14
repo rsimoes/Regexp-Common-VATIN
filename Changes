@@ -1,4 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+    Fixed POD.
+
+v0.0.1    2013-02-14 15:32:33 America/Chicago
     First version, released on an unsuspecting world.
