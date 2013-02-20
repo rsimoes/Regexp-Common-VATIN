@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+    - For the sake of JavaScript compatibility, replaced POSIX character classes
+      in regular expressions with character ranges
 
 v0.0.3    2013-02-20 03:15:55 America/Chicago
     - Removed qr() quoting of patterns on creation.
