@@ -54,14 +54,14 @@ my %patterns = (
 foreach my $alpha2 ( keys %patterns ) {
     pattern(
         name   => ["VATIN", $alpha2],
-        create => qr(\b$alpha2$patterns{$alpha2}\b)
+        create => "\\b$alpha2$patterns{$alpha2}\\b"
     );
 };
 pattern(
     name   => [qw(VATIN any)],
     create => do {
         my $any = join("|", map { "$_$patterns{$_}" } keys %patterns);
-        qr(\b(?:$any)\b);
+        "\\b(?:$any)\\b";
     }
 );
 
