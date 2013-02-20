@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+v0.0.3    2013-02-20 03:15:55 America/Chicago
     - Removed qr() quoting of patterns on creation.
 
 v0.0.2    2013-02-14 17:05:41 America/Chicago
