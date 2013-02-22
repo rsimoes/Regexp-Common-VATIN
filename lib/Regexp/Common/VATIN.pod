@@ -6,6 +6,7 @@ Regexp::Common::VATIN - Patterns for matching EU VAT Identification Numbers
 
 =head1 SYNOPSIS
 
+    use feature qw(say);
     use Regexp::Common qw(VATIN);
     say "DE123456789" =~ $RE{VATIN}{DE};  # 1
     say "DE123456789" =~ $RE{VATIN}{any}; # 1
