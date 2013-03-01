@@ -1,6 +1,9 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+    - Fixed Italy regexp.
+
+v0.0.5    2013-02-22 13:16:01 America/Chicago
     - Removed word boundaries from patterns.
     - Updated POD with warning.
 
