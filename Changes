@@ -1,6 +1,9 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+    - Fixed patterns for Spain and the Netherlands.
+
+v0.0.6    2013-03-01 14:58:12 America/Chicago
     - Fixed Italy regexp.
 
 v0.0.5    2013-02-22 13:16:01 America/Chicago
