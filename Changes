@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+v0.0.7    2013-03-04 12:50:20 America/Chicago
     - Fixed patterns for Spain and the Netherlands.
 
 v0.0.6    2013-03-01 14:58:12 America/Chicago
