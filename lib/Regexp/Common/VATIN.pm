@@ -14,9 +14,9 @@ my $d  = "[0-9]";
 my $s  = "[ ]?";
 
 # repeats:
-my ($r2, $r3, $r4, $r5, $r8, $r9, $r10, $r11, $r12) = map {
+my ($r2, $r3, $r4, $r5, $r7, $r8, $r9, $r10, $r11, $r12) = map {
     "{" . $_ . "}"
-} 2..5, 8..12;
+} 2..5, 7..12;
 
 my %patterns = (
     AT => "U$d$r8",                   # Austria
@@ -28,7 +28,7 @@ my %patterns = (
     DK => "(?:$d$r2$s){3}$d$r2",      # Denmark
     EE => "$d$r9",                    # Estonia
     EL => "$d$r9",                    # Greece
-    ES => "$an$d$r9$an",              # Spain
+    ES => "$an$d$r7$an",              # Spain
     FI => "$d$r8",                    # Finland
     FR => "$an$r2$s$d$r9",            # France
     GB => do {                        # United Kingdom
