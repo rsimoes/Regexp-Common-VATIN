@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+    - Added pattern of Isle of Man.
 
 v0.0.7    2013-03-04 12:50:20 America/Chicago
     - Fixed patterns for Spain and the Netherlands.

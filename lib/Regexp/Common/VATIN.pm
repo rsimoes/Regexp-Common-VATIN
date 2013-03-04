@@ -18,6 +18,12 @@ my ($r2, $r3, $r4, $r5, $r7, $r8, $r9, $r10, $r11, $r12) = map {
     "{" . $_ . "}"
 } 2..5, 7..12;
 
+my $uk_pattern = do {
+    my $multi_block  = "$d$r3$s$d$r4$s$d$r2$s(?:$d$r3)?";
+    my $single_block = "(?:GD|HA)$d$r3";
+    "(?:$multi_block|$single_block)";
+};
+
 my %patterns = (
     AT => "U$d$r8",                   # Austria
     BE => "0$d$r9",                   # Belgium
@@ -31,13 +37,10 @@ my %patterns = (
     ES => "$an$d$r7$an",              # Spain
     FI => "$d$r8",                    # Finland
     FR => "$an$r2$s$d$r9",            # France
-    GB => do {                        # United Kingdom
-        my $multi_block  = "$d$r3$s$d$r4$s$d$r2$s(?:$d$r3)?";
-        my $single_block = "(?:GD|HA)$d$r3";
-        "(?:$multi_block|$single_block)";
-    },
+    GB => $uk_pattern,                # United Kingdom
     HU => "$d$r8",                    # Hungary
     IE => "${d}[0-9a-zA-Z+*]$d$r5$a", # Ireland
+    IM => $uk_pattern,                # Isle of Man
     IT => "$d$r11",                   # Italy
     LT => "(?:$d$r9|$d$r12)",         # Lithuania
     LU => "$d$r8",                    # Luxembourg
@@ -52,9 +55,10 @@ my %patterns = (
 );
 
 foreach my $alpha2 ( keys %patterns ) {
+    my $prefix = $alpha2 eq "IM" ? "GB" : $alpha2;
     pattern(
         name   => ["VATIN", $alpha2],
-        create => "$alpha2$patterns{$alpha2}"
+        create => "$prefix$patterns{$alpha2}"
     );
 };
 pattern(
