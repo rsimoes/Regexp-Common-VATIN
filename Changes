@@ -1,6 +1,9 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+    - Added Slovenia.
+
+v0.0.8    2013-03-04 13:06:43 America/Chicago
     - Added pattern of Isle of Man.
 
 v0.0.7    2013-03-04 12:50:20 America/Chicago

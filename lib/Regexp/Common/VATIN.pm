@@ -51,6 +51,7 @@ my %patterns = (
     PT => "$d$r9",                    # Portugal
     RO => "${d}{2,10}",               # Romania
     SE => "$d$r12",                   # Sweden
+    SI => "$d$r8",                    # Slovenia
     SK => "$d$r10"                    # Slovakia
 );
 
