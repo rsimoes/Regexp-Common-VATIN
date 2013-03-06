@@ -34,6 +34,7 @@ my %patterns = (
     DK => "(?:$d$r2$s){3}$d$r2",      # Denmark
     EE => "$d$r9",                    # Estonia
     EL => "$d$r9",                    # Greece
+    GR => "$d$r9",                    # Greece with its ISO-3166 alpha code
     ES => "$an$d$r7$an",              # Spain
     FI => "$d$r8",                    # Finland
     FR => "$an$r2$s$d$r9",            # France
@@ -56,7 +57,11 @@ my %patterns = (
 );
 
 foreach my $alpha2 ( keys %patterns ) {
-    my $prefix = $alpha2 eq "IM" ? "GB" : $alpha2;
+    my $prefix = $alpha2 eq "IM"
+               ? "GB"
+               : $alpha2 eq "GR"
+                   ? "EL"
+                   : $alpha2;
     pattern(
         name   => ["VATIN", $alpha2],
         create => "$prefix$patterns{$alpha2}"
