@@ -39,6 +39,7 @@ my %patterns = (
     FI => "$d$r8",                    # Finland
     FR => "$an$r2$s$d$r9",            # France
     GB => $uk_pattern,                # United Kingdom
+    HR => "$d$r11",                   # Croatia
     HU => "$d$r8",                    # Hungary
     IE => "${d}[0-9a-zA-Z+*]$d$r5$a", # Ireland
     IM => $uk_pattern,                # Isle of Man
