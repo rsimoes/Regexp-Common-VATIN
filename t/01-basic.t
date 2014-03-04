@@ -2,7 +2,7 @@
 
 use strict;
 use warnings FATAL => "all";
-use Test::More tests => 15;
+use Test::More tests => 16;
 use Regexp::Common qw(VATIN);
 
 ok "DE123456789" =~ /^$RE{VATIN}{DE}$/;
@@ -23,3 +23,5 @@ ok "ESA9999999B" =~ /^$RE{VATIN}{ES}$/;    # Spain!
 ok "EL123456789" =~ /^$RE{VATIN}{EL}$/;    # Greece!
 ok "EL123456789" =~ /^$RE{VATIN}{GR}$/;    # Greece with ISO-3166 code
 ok "GR123456789" !~ /^$RE{VATIN}{GR}$/;    # VATIN prefix still requires "EL"
+
+ok "HR12345678901" =~ /^$RE{VATIN}{HR}$/;  # Croatia
