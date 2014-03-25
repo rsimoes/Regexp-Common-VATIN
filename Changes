@@ -1,8 +1,9 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
-    - Accomodated usage of ISO-3166 by adding the Greece pattern with the key,
-      "GR".
+    - Added pattern for Croatia (HR).
+    - Accomodated usage of ISO-3166 by allowing access to the Greece's pattern
+      with the key, "GR".
 
 v0.0.9    2013-03-05 18:20:13 America/Chicago
     - Added Slovenia.
