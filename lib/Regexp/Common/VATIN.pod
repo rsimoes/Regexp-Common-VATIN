@@ -15,7 +15,9 @@ Regexp::Common::VATIN - Patterns for matching EU VAT Identification Numbers
 =head1 DESCRIPTION
 
 This module provides regular expression patterns to match any of the sanctioned
-VATIN formats from the 26 nations levying a European Union value added tax.
+VATIN formats from the 27 nations levying a European Union value added tax. The
+data found at http://ec.europa.eu/taxation_customs/vies/faq.html#item_11 is
+used as the authoritative source of all patterns.
 
 =head1 JAVASCRIPT
 
