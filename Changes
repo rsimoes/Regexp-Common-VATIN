@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+    - Updated pattern for Ireland (IE).
 
 v0.0.10   2014-03-25 11:09:24-05:00 America/Chicago
     - Added pattern for Croatia (HR).
