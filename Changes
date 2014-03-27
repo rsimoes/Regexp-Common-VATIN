@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+    - Loosened Ireland's pattern given a probable misprint on the European
+      Commission website.
 
 v0.0.11   2014-03-25 16:34:23-05:00 America/Chicago
     - Updated pattern for Ireland (IE).
