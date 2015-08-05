@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+v1.0      2015-08-05 18:46:58-05:00 America/Chicago
     - Updated and corrected Ireland patterns.
 
 v0.0.12   2014-03-27 14:10:11-05:00 America/Chicago
