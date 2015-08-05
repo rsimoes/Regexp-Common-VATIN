@@ -29,4 +29,4 @@ ok 'HR12345678901' =~ /^$RE{VATIN}{HR}$/;  # Croatia
 ok 'IE1234567X' =~ /^$RE{VATIN}{IE}$/;  # Ireland
 ok 'IE1234567WI' =~ /^$RE{VATIN}{IE}$/; # Ireland
 ok 'IE1X34567Y'  =~ /^$RE{VATIN}{IE}$/; # Ireland
-ok 'IE1*23456Z'  =~ /^$RE{VATIN}{IE}$/; # Ireland
+ok 'IE1234567AB' =~ /^$RE{VATIN}{IE}$/; # Ireland

@@ -32,9 +32,12 @@ my %patterns = (
     HR => '[0-9]{11}',                          # Croatia
     HU => '[0-9]{8}',                           # Hungary
     IE => do {                                  # Ireland
-        my $new_format = '[0-9]{7}[a-zA-Z]{1,2}';
-        my $old_format = '[0-9][0-9a-zA-Z+*][0-9]{5}[a-zA-Z]';
-        "(?:$new_format|$old_format)";
+        my @formats = (
+            '[0-9]{7}[a-zA-Z]',
+            '[0-9][A-Z][0-9]{5}[a-zA-Z]',
+            '[0-9]{7}[a-zA-Z]{2}'
+        );
+        '(?:' . join('|', @formats) . ')';
     },
     IM => $uk_pattern,                          # Isle of Man
     IT => '[0-9]{11}',                          # Italy
@@ -61,7 +64,8 @@ foreach my $alpha2 ( keys %patterns ) {
         name   => ['VATIN', $alpha2],
         create => "$prefix$patterns{$alpha2}"
     );
-};
+}
+
 pattern(
     name   => [qw(VATIN any)],
     create => do {
